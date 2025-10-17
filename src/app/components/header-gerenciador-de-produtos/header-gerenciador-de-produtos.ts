@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header-gerenciador-de-produtos',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './header-gerenciador-de-produtos.html',
   styleUrl: './header-gerenciador-de-produtos.scss'
 })
 export class HeaderGerenciadorDeProdutos {
+  private router = inject(Router);
 
+  Logout(){
+    this.router.navigate(['']);
+  }
 }
