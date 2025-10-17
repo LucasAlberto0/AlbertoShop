@@ -1,0 +1,122 @@
+header {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(43, 42, 42);
+    padding: 20px 20px;
+
+    article {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #FFFAFA;
+
+        span {
+            font-size: 1.2rem;
+        }
+
+        button {
+            color: #FFFAFA;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media(max-width: 1300px) {
+    header {
+        padding: 18px 18px;
+
+        article {
+            max-width: 900px;
+        }
+    }
+}
+
+@media(max-width: 1069px) {
+    header {
+        article {
+            max-width: 850px;
+
+            span {
+                font-size: 1.1rem;
+            }
+
+            button {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    header {
+        article {
+            max-width: 700px;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    header {
+        padding: 15px 15px;
+
+        article {
+            max-width: 600px;
+
+            span {
+                font-size: 1rem;
+            }
+
+            button {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+@media(max-width: 650px) {
+    header {
+        padding: 15px 15px;
+
+        article {
+            max-width: 380px;
+
+            span {
+                font-size: 0.8rem;
+            }
+
+            button {
+                font-size: 0.7rem;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 400px) {
+    header {
+        article {
+            max-width: 350px;
+        }
+    }
+}
+
+@media(max-width: 350px) {
+    header {
+        article {
+            max-width: 320px;
+        }
+    }
+}
