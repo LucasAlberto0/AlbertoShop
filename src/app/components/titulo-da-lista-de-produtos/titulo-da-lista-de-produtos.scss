@@ -27,6 +27,13 @@ section {
             background-color: #612cb5;
             border: none;
             border-radius: 10px;
+            transition: all ease 0.3s;
+            &:hover{
+                scale: 1.1;
+                background-color: #905ee0;
+                color: #FFFAFA;
+                cursor: pointer;
+            }
         }
     }
 }

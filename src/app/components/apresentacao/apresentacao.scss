@@ -44,6 +44,7 @@ section {
             transition: all ease 0.4s;
             cursor: pointer;
             &:hover{
+                scale: 1.1;
                 background-color: #905ee0;
                 color: #FFFAFA;
             }
