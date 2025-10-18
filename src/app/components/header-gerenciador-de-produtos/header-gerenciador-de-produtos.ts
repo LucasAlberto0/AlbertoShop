@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-header-gerenciador-de-produtos',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './header-gerenciador-de-produtos.html',
   styleUrl: './header-gerenciador-de-produtos.scss'
 })
