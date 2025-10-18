@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { ProdutosService } from '../../services/produtos-service';
-import { IProduto } from '../../interfaces/IprodutoInterface';
-
+import { IProduto } from '../../interfaces/IProdutoInterface';
 @Component({
   selector: 'app-lista-de-produtos',
   imports: [MatTableModule],
