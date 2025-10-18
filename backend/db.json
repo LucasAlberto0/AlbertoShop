@@ -1,18 +1,32 @@
 {
   "produtos": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Notebook Dell",
       "descricao": "Notebook Dell Inspiron 15",
-      "preco": 4500.0,
+      "preco": 4500,
       "estoque": 12
     },
     {
-      "id": 2,
-      "nome": "Mouse Logitech",
-      "descricao": "Mouse sem fio Logitech",
-      "preco": 150.0,
-      "estoque": 40
+      "id": "1",
+      "nome": "Notebook Dell",
+      "descricao": "Notebook Dell Inspiron 15",
+      "preco": 4500,
+      "estoque": 12
+    },
+    {
+      "id": "1",
+      "nome": "Notebook Dell",
+      "descricao": "Notebook Dell Inspiron 15",
+      "preco": 4500,
+      "estoque": 12
+    },
+    {
+      "id": "1",
+      "nome": "Notebook Dell",
+      "descricao": "Notebook Dell Inspiron 15",
+      "preco": 4500,
+      "estoque": 12
     }
   ]
 }
