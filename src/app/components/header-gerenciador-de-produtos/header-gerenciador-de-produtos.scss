@@ -3,8 +3,7 @@ header {
     display: flex;
     justify-content: center;
     background-color: #151C29;
-    padding: 20px 20px;
-
+    padding: 10px 10px;
     article {
         max-width: 1200px;
         width: 100%;
@@ -12,11 +11,10 @@ header {
         justify-content: space-between;
         align-items: center;
         color: #FFFAFA;
-
-        span {
-            font-size: 1.2rem;
+        .logo-img{
+            width: 120px;
+            height: 60px;
         }
-
         button {
             color: #FFFAFA;
             display: flex;
@@ -33,7 +31,6 @@ header {
 @media(max-width: 1300px) {
     header {
         padding: 18px 18px;
-
         article {
             max-width: 900px;
         }
@@ -44,11 +41,6 @@ header {
     header {
         article {
             max-width: 850px;
-
-            span {
-                font-size: 1.1rem;
-            }
-
             button {
                 font-size: 0.9rem;
             }
@@ -67,14 +59,12 @@ header {
 @media(max-width: 768px) {
     header {
         padding: 15px 15px;
-
         article {
             max-width: 600px;
-
-            span {
-                font-size: 1rem;
+            .logo-img{
+                width: 90px;
+                height: 40px;
             }
-
             button {
                 font-size: 0.8rem;
             }
@@ -85,17 +75,10 @@ header {
 @media(max-width: 650px) {
     header {
         padding: 15px 15px;
-
         article {
             max-width: 490px;
-
-            span {
-                font-size: 0.8rem;
-            }
-
             button {
                 font-size: 0.7rem;
-
                 img {
                     width: 20px;
                     height: 20px;
@@ -107,8 +90,13 @@ header {
 
 @media(max-width: 550px){
     header{
+        padding: 12px 10px;
         article{
             max-width: 390px;
+            .logo-img{
+                width: 80px;
+                height: 35px;
+            }
         }
     }
 }

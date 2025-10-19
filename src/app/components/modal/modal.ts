@@ -50,14 +50,12 @@ export class Modal implements OnInit {
 
     if (this.ehEdicao && produtoForm.id != null) {
       this._produtosService.atualizarProduto(produtoForm.id, produtoForm).subscribe({
-        next: (produtoAtualizado) => this._dialogRef.close(produtoAtualizado),
-        error: (err) => console.error('Erro ao editar produto:', err)
+        next: (produtoAtualizado) => this._dialogRef.close(produtoAtualizado)
       });
     } else {
       const { id, ...payload } = produtoForm as any;
       this._produtosService.criarProduto(payload).subscribe({
-        next: (novoProduto) => this._dialogRef.close(novoProduto),
-        error: (err) => console.error('Erro ao criar produto:', err)
+        next: (novoProduto) => this._dialogRef.close(novoProduto)
       });
     }
   }

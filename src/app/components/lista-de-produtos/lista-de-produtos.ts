@@ -22,8 +22,7 @@ export class ListaDeProdutos implements OnInit {
 
   carregarProdutos() {
     this._produtoService.listarProdutos().subscribe({
-      next: (produtos) => (this.dataSource.data = produtos),
-      error: (err) => console.error(err)
+      next: (produtos) => (this.dataSource.data = produtos)
     });
   }
 
