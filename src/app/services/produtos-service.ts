@@ -8,7 +8,6 @@ import { IProduto } from '../interfaces/IProdutoInterface';
 export class ProdutosService {
   private apiUrl = 'http://localhost:3000/produtos'
   
-
   constructor(private _http: HttpClient ) {}
 
   listarProdutos(): Observable<IProduto[]> {
@@ -17,6 +16,10 @@ export class ProdutosService {
 
   criarProduto(produto: IProduto): Observable<IProduto> {
     return this._http.post<IProduto>(this.apiUrl, produto);
+  }
+
+  atualizarProduto(id: number, produto: IProduto): Observable<IProduto> {
+    return this._http.put<IProduto>(`${this.apiUrl}/${id}`, produto);
   }
 
   deletarProduto(id: number): Observable<any> {

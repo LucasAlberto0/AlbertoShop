@@ -28,7 +28,7 @@
             <ng-container matColumnDef="acoes">
                 <th mat-header-cell *matHeaderCellDef> Ações</th>
                 <td mat-cell *matCellDef="let element"> <div class="grupo_button">
-                    <button><img src="img/icons/edit-icon.svg" alt=""></button>
+                    <button (click)="editarProduto(element)"><img src="img/icons/edit-icon.svg" alt=""></button>
                     <button (click)="deletarProduto(element.id)"><img src="img/icons/delete-icon.svg" alt=""></button></div>
                 </td>
             </ng-container>

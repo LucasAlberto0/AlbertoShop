@@ -1,6 +1,6 @@
 <form class="font-quando" [formGroup]="form" (ngSubmit)="salvar()" class="form-container">
   <div>
-    <h2 class="font-quando-b" mat-dialog-title>Novo Produto</h2>
+    <h2 class="font-quando-b" mat-dialog-title>{{titulo}}</h2>
     <p>Preencha os dados do produto abaixo</p>
   </div>
   <mat-form-field appearance="outline">
@@ -24,7 +24,7 @@
   </mat-form-field>
 
   <div class="botoes">
-    <button mat-flat-button color="primary" type="submit" class="button-salvar">Salvar</button>
+    <button mat-flat-button color="primary" type="submit" class="button-salvar">{{ ehEdicao ? 'Salvar Alterações' : 'Cadastrar' }}</button>
     <button mat-stroked-button color="warn" type="button" (click)="cancelar()">Cancelar</button>
   </div>
 </form>

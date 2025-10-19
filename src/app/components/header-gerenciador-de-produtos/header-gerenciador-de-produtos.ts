@@ -8,9 +8,9 @@ import { Router} from '@angular/router';
   styleUrl: './header-gerenciador-de-produtos.scss'
 })
 export class HeaderGerenciadorDeProdutos {
-  private router = inject(Router);
+  private _router = inject(Router);
 
   Logout(){
-    this.router.navigate(['']);
+    this._router.navigate(['']);
   }
 }

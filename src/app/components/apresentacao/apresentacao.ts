@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
   styleUrl: './apresentacao.scss'
 })
 export class Apresentacao {
-  private router = inject(Router);
+  private _router = inject(Router);
 
   NavegacaoRota() {
-    this.router.navigate(['gerenciamento'])
+    this._router.navigate(['gerenciamento'])
   }
 }
