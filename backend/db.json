@@ -2,10 +2,24 @@
   "produtos": [
     {
       "id": "1",
-      "nome": "Notebook Dell",
-      "descricao": "Notebook Dell Inspiron 15",
-      "preco": 4500,
-      "estoque": 12
+      "nome": "Notebook Asus",
+      "descricao": "Processador I5, 16 GB Ram",
+      "preco": 3400,
+      "estoque": 10
+    },
+    {
+      "id": "6371",
+      "nome": "Iphone 17 ",
+      "descricao": "Novo lançamento da Apple",
+      "preco": 20000,
+      "estoque": 5
+    },
+    {
+      "id": "076b",
+      "nome": "Ps5",
+      "descricao": "Console de nova gereção da Sony",
+      "preco": 3500,
+      "estoque": 30
     }
   ]
 }
