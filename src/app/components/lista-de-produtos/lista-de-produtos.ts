@@ -36,7 +36,6 @@ export class ListaDeProdutos implements OnInit {
       width: '500px',
       data: {produto}
     });
-
     dialogRef.afterClosed().subscribe((produtoAtualizado) => {
       if(produtoAtualizado) {
         this.dataSource.data = this.dataSource.data.map(p => p.id === produtoAtualizado.id ? produtoAtualizado : p);

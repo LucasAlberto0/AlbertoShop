@@ -1,22 +1,77 @@
-<form class="font-quando" [formGroup]="form" (ngSubmit)="salvar()" class="form-container">
+<form class="font-quando form-container" [formGroup]="form" (ngSubmit)="salvar()">
   <div>
-    <h2 class="font-quando-b" mat-dialog-title>{{titulo}}</h2>
+    <h2 class="font-quando-b" mat-dialog-title>{{ titulo }}</h2>
     <p>Preencha os dados do produto abaixo</p>
   </div>
-    <mat-label>Nome</mat-label>
-    <input matInput formControlName="nome" required maxlength="20"/>
 
-    <mat-label>Descrição</mat-label>
-    <input matInput formControlName="descricao" required maxlength="40"/>
+  <mat-label>Nome</mat-label>
+  <input
+    matInput
+    formControlName="nome"
+    required
+    maxlength="20"
+    [ngClass]="{ invalido: form.get('nome')?.invalid && form.get('nome')?.touched }"
+  />
+  @if (form.get('nome')?.invalid && form.get('nome')?.touched) {
+  <div class="div-erro">O nome é obrigatório</div>
+  }
+  <mat-label>Descrição</mat-label>
+  <input
+    matInput
+    formControlName="descricao"
+    required
+    maxlength="40"
+    [ngClass]="{ invalido: form.get('descricao')?.invalid && form.get('descricao')?.touched }"
+  />
+  @if (form.get('descricao')?.invalid && form.get('descricao')?.touched) {
+  <div class="div-erro">A descrição é obrigatória</div>
+  }
 
-    <mat-label>Preço(R$)</mat-label>
-    <input matInput type="number" formControlName="preco" required min="0.01" step="0.01" placeholder="0,00"/>
+  <mat-label>Preço</mat-label>
+  <input
+    matInput
+    type="number"
+    formControlName="preco"
+    required
+    min="0.01"
+    step="0.01"
+    placeholder="0,00"
+    [ngClass]="{
+      invalido: (form.get('preco')?.invalid || form.get('preco')?.value <= 0) && enviou
+    }"
+  />
+  @if ((form.get('preco')?.invalid || form.get('preco')?.value <= 0) && enviou) {
+  <div class="div-erro">Preço obrigatório e deve ser maior que 0</div>
+  }
 
-    <mat-label>Estoque</mat-label>
-    <input class="input-custom" matInput type="number" formControlName="estoque" required max="1000" min="1"/>
+  <mat-label>Estoque</mat-label>
+  <input
+    matInput
+    type="number"
+    formControlName="estoque"
+    required
+    min="1"
+    max="1000"
+    [ngClass]="{
+      invalido: (form.get('estoque')?.invalid || form.get('estoque')?.value <= 0) && enviou
+    }"
+  />
+  @if ((form.get('estoque')?.invalid || form.get('estoque')?.value <= 0) && enviou) {
+  <div class="div-erro">O limite é até 1000</div>
+  }
 
   <div class="botoes">
-    <button mat-flat-button color="primary" type="submit" class="button-salvar">{{ ehEdicao ? 'Salvar Alterações' : 'Cadastrar' }}</button>
-    <button mat-stroked-button color="warn" type="button" class="button-cancelar" (click)="cancelar()">Cancelar</button>
+    <button mat-flat-button color="primary" type="submit" class="button-salvar">
+      {{ ehEdicao ? 'Salvar Alterações' : 'Cadastrar' }}
+    </button>
+    <button
+      mat-stroked-button
+      color="warn"
+      type="button"
+      class="button-cancelar"
+      (click)="cancelar()"
+    >
+      Cancelar
+    </button>
   </div>
 </form>

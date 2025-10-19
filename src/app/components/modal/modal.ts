@@ -10,7 +10,7 @@ import { IProduto } from '../../interfaces/IProdutoInterface';
 
 @Component({
   selector: 'app-modal',
-  imports: [CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule],
+  imports: [CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, CommonModule],
   templateUrl: './modal.html',
   styleUrl: './modal.scss'
 })
@@ -18,6 +18,7 @@ export class Modal implements OnInit {
   form: FormGroup;
   titulo: string;
   ehEdicao: boolean;
+  enviou: boolean = false;
 
   constructor(private _fb: FormBuilder, 
     private _produtosService: ProdutosService, 
@@ -44,6 +45,7 @@ export class Modal implements OnInit {
   }
 
   salvar() {
+    this.enviou = true; 
     if (this.form.invalid) return;
 
     const produtoForm: IProduto = this.form.getRawValue();

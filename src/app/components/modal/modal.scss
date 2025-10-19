@@ -8,7 +8,6 @@ form {
     p {
         color: #fffafaa4;
     }
-    
 }
 
 .form-container {
@@ -25,13 +24,25 @@ form {
         border: 2px solid #b5afaf5d;
         padding: 20px 10px;
         border-radius: 10px;
-        &:focus{
-            border: 2px solid #612cb5;
+        &.invalido {
+            border-color: red;
+        }
+        &:focus {
+            border-color: #612cb5;
             outline: none;
         }
+        &::placeholder {
+            color: #fff;
+            opacity: 0.6;
+        }
     }
-    
+    .div-erro {
+        color: red;
+        font-size: 12px;
+        margin-top: 2px;
+    }
 }
+
 
 .botoes {
     display: flex;
@@ -52,6 +63,8 @@ form {
     background-color: #FFFAFA;
 }
 
-
-
-
+@media (max-width: 480px){
+    form{
+        height: 80vh;
+    }
+}
