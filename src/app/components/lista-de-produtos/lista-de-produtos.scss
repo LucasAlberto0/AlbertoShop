@@ -5,6 +5,7 @@ section{
     article{
         border-radius: 20px;
         padding: 30px 20px;
+        margin-bottom: 30px;
         min-height: 400px;
         max-width: 1200px;
         width: 100%;
@@ -16,14 +17,19 @@ table {
     margin-top: 10px;
     width: 100%;
     background-color: #151C29;
+    overflow-x: auto;
     th{
+        text-align: center;
         color: #fffafaa4;
     }
     td{
+        text-align: center;
         color: #FFFAFA;
         .grupo_button{
             display: flex;
             gap: 15px;
+            width: 100%;
+            justify-content: center;
         button{
             background-color: transparent;
             border: none;
@@ -42,6 +48,10 @@ table {
     .mat-mdc-cell{
         border-color: #fffafa2d;
     }
+}
+
+div#container {
+    overflow-y: auto;
 }
 
 @media(max-width: 1300px) {
