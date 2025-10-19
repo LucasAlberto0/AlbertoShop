@@ -43,7 +43,7 @@ npm i
 ```
 
 ## Comandos para rodar o projeto (back-end) na sua máquina:
-(Dentro do projeto front-end tem a pasta back-end)
+(Dentro do projeto front-end tem a pasta back-end, abra um terminal novo para rodar ela)
 
 ## 1º
 ```bash
