@@ -1,59 +1,69 @@
-# AlbertoShop
+# Desafio Módulo 3 - Sistema de cadastro de produtos (Angular)(Trilha Front-End)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
+<img width="563" height="31" alt="Captura de Tela 2025-10-19 às 17 23 18" src="https://github.com/user-attachments/assets/cf66b11e-6f53-490f-8e93-9858d9ba98f0" />
 
-## Development server
 
-To start a local development server, run:
+<br>
 
+
+
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/38a1c173-4cfe-48a3-9ac7-4c0554fe1911" />
+
+
+
+## Tecnologias utilizadas:
+- Angular v20.3.6
+- Typescript v5.9.2
+- Sass
+- Aos v2.3.4
+- Json Server
+- Angular Material v20.2.9
+
+
+
+
+## Comandos para rodar o projeto (front-end) na sua máquina:
+(Certifique-se que o Node e Git estejam instalados na sua máquina!)
+
+
+## 1º
 ```bash
-ng serve
+git clone https://github.com/LucasAlberto0/AlbertoShop.git
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+## 2º
 ```bash
-ng generate component component-name
+cd AlbertoShop
+code .
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+## 3º
 ```bash
-ng generate --help
+npm i
 ```
 
-## Building
+## Comandos para rodar o projeto (back-end) na sua máquina:
+(Dentro do projeto front-end tem a pasta back-end)
 
-To build the project run:
-
+## 1º
 ```bash
-ng build
+cd backend
+```
+## 2º
+```bash
+npm install -g json-server
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 3º 
 
 ```bash
-ng test
+npm start
 ```
+<br>
 
-## Running end-to-end tests
+<img width="2834" height="1248" alt="image" src="https://github.com/user-attachments/assets/deb60bc1-e0f6-4139-bb86-242dd464bd42" />
 
-For end-to-end (e2e) testing, run:
 
-```bash
-ng e2e
-```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
