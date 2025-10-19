@@ -15,6 +15,9 @@ section {
         display: flex;
         align-items: center;
         gap: 6px;
+        a{
+            text-decoration: none;
+        }
     }
     h1 {
         font-size: 4rem;
@@ -46,6 +49,9 @@ section {
             &:hover{
                 scale: 1.1;
                 background-color: #905ee0;
+                color: #FFFAFA;
+            }
+            &:hover a{
                 color: #FFFAFA;
             }
         }
