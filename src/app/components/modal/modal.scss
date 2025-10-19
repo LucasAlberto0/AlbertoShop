@@ -1,17 +1,14 @@
-form{
+form {
     background-color: #020817;
     padding: 20px;
-    h2{
+    h2 {
         color: #FFFAFA;
         margin-bottom: 3px;
     }
-    p{
+    p {
         color: #fffafaa4;
     }
     
-}
-.input-custom{
-    color: #FFFAFA;
 }
 
 .form-container {
@@ -19,13 +16,21 @@ form{
     flex-direction: column;
     gap: 15px;
     overflow-y: auto;
-    mat-label{
+    mat-label {
         color: #FFFAFA;
     }
     input {
-        color: #FFFAFA; 
-        
+        color: #FFFAFA;
+        background-color: #020817;
+        border: 2px solid #b5afaf5d;
+        padding: 20px 10px;
+        border-radius: 10px;
+        &:focus{
+            border: 2px solid #612cb5;
+            outline: none;
+        }
     }
+    
 }
 
 .botoes {
@@ -34,13 +39,18 @@ form{
     gap: 12px;
     background-color: #020817;
     border: none;
+    button {
+        background-color: #612cb5;
+        color: #FFFAFA;
+    }
+    .button-cancelar {
+        background-color: transparent;
+    }
 }
 
-.button-salvar{
+.button-salvar {
     background-color: #FFFAFA;
 }
-
-
 
 
 

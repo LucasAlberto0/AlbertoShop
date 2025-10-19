@@ -63,5 +63,4 @@ export class Modal implements OnInit {
   cancelar() {
     this._dialogRef.close();
   }
-
 }

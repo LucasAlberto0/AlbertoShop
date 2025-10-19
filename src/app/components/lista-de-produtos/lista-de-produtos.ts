@@ -4,9 +4,10 @@ import { ProdutosService } from '../../services/produtos-service';
 import { IProduto } from '../../interfaces/IProdutoInterface';
 import { MatDialog } from '@angular/material/dialog';
 import { Modal } from '../modal/modal';
+import { CurrencyPipe } from '@angular/common';
 @Component({
   selector: 'app-lista-de-produtos',
-  imports: [MatTableModule],
+  imports: [MatTableModule, CurrencyPipe],
   templateUrl: './lista-de-produtos.html',
   styleUrl: './lista-de-produtos.scss'
 })
