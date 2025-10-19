@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { ListaDeProdutos } from './../../components/lista-de-produtos/lista-de-produtos';
+import { Component, ViewChild } from '@angular/core';
 import { HeaderGerenciadorDeProdutos } from "../../components/header-gerenciador-de-produtos/header-gerenciador-de-produtos";
 import { TituloDaListaDeProdutos } from "../../components/titulo-da-lista-de-produtos/titulo-da-lista-de-produtos";
-import { ListaDeProdutos } from "../../components/lista-de-produtos/lista-de-produtos";
+import { IProduto } from '../../interfaces/IProdutoInterface';
 
 @Component({
   selector: 'app-gerenciamento-de-produtos',
@@ -10,5 +11,9 @@ import { ListaDeProdutos } from "../../components/lista-de-produtos/lista-de-pro
   styleUrl: './gerenciamento-de-produtos.scss'
 })
 export class GerenciamentoDeProdutos {
+  @ViewChild('listaProdutos') listaDeProdutos!: ListaDeProdutos;
 
+  atualizarTabela(produto: IProduto){
+    this.listaDeProdutos.adicionarProdutoNaTabela(produto);
+  }
 }

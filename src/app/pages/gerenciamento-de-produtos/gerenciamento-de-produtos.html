@@ -1,5 +1,5 @@
 <main>
     <app-header-gerenciador-de-produtos />
-    <app-titulo-da-lista-de-produtos/>
-    <app-lista-de-produtos/>
+    <app-titulo-da-lista-de-produtos (produtoCadastrado)="atualizarTabela($event)"/>
+    <app-lista-de-produtos #listaProdutos/>
 </main>

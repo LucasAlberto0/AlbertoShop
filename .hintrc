@@ -5,6 +5,7 @@
   "hints": {
     "axe/name-role-value": "off",
     "axe/text-alternatives": "off",
-    "typescript-config/is-valid": "off"
+    "typescript-config/is-valid": "off",
+    "axe/forms": "off"
   }
 }

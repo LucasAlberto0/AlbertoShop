@@ -1,0 +1,47 @@
+form{
+    background-color: #020817;
+    padding: 20px;
+    h2{
+        color: #FFFAFA;
+        margin-bottom: 3px;
+    }
+    p{
+        color: #fffafaa4;
+    }
+    
+}
+.input-custom{
+    color: #FFFAFA;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+    mat-label{
+        color: #FFFAFA;
+    }
+    input {
+        color: #FFFAFA; 
+        
+    }
+}
+
+.botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    background-color: #020817;
+    border: none;
+}
+
+.button-salvar{
+    background-color: #FFFAFA;
+}
+
+
+
+
+
+

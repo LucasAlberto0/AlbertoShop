@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableModule } from '@angular/material/table';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { ProdutosService } from '../../services/produtos-service';
 import { IProduto } from '../../interfaces/IProdutoInterface';
 @Component({
@@ -10,7 +10,7 @@ import { IProduto } from '../../interfaces/IProdutoInterface';
 })
 export class ListaDeProdutos implements OnInit {
   displayedColumns: string[] = ['nome', 'descricao', 'preco', 'estoque', 'acoes' ];
-  dataSource: IProduto[] = [];
+  dataSource = new MatTableDataSource<IProduto>([]);
 
   constructor(private _produtoService: ProdutosService) {}
 
@@ -20,12 +20,18 @@ export class ListaDeProdutos implements OnInit {
 
   carregarProdutos() {
     this._produtoService.listarProdutos().subscribe({
-      next: (data) => (this.dataSource = data),
-      error: (err) => console.error('Erro ao buscar produtos', err)
+      next: (produtos) => (this.dataSource.data = produtos),
+      error: (err) => console.error(err)
     });
   }
 
+  adicionarProdutoNaTabela(produto: IProduto) {
+    this.dataSource.data = [...this.dataSource.data, produto]
+  }
+
   deletarProduto(id: number) {
-    this._produtoService.deletarProduto(id).subscribe(() => this.carregarProdutos());
+    this._produtoService.deletarProduto(id).subscribe(() => {
+      this.dataSource.data = this.dataSource.data.filter(p => p.id !== id);
+    });
   }
 }
